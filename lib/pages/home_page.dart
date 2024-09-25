@@ -14,7 +14,6 @@ class HomePage extends StatelessWidget {
       // backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         title: const Text('播放列表'),
-        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
       body: Consumer<PlayListProvider>(
         builder: (BuildContext context, PlayListProvider value, Widget? child) {

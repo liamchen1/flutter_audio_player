@@ -10,27 +10,24 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         title: Text(
           '设置',
-          style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary),
         ),
-        titleSpacing: 0.0,
-        leading: GestureDetector(
-          onTap: () {
-            Navigator.of(context).pop();
-          },
-          child: Icon(Icons.arrow_back,
-              color: Theme.of(context).colorScheme.inversePrimary),
-        ),
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        // titleSpacing: 0.0,
+        // leading: GestureDetector(
+        //   onTap: () {
+        //     Navigator.of(context).pop();
+        //   },
+        //   child: Icon(Icons.arrow_back,
+        //       color: Theme.of(context).colorScheme.inversePrimary),
+        // ),
       ),
       body: Column(
         children: [
           Container(
             decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.secondary,
+              color: Theme.of(context).colorScheme.secondaryContainer,
               borderRadius: BorderRadius.circular(12),
             ),
             margin: const EdgeInsets.all(16),
@@ -39,11 +36,9 @@ class SettingsPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text('暗色模式',
-                      style: TextStyle(
-                          color: Theme.of(context).colorScheme.inversePrimary)),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text('暗色模式'),
                 ),
                 CupertinoSwitch(
                   value: Provider.of<ThemeProvider>(context, listen: false)

@@ -18,7 +18,7 @@ class SongPage extends StatelessWidget {
         final currentSong = value.playList[value.currentSongIndex];
 
         return Scaffold(
-          backgroundColor: Theme.of(context).colorScheme.surface,
+          // backgroundColor: Theme.of(context).colorScheme.surface,
           body: SafeArea(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
